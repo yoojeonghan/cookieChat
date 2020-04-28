@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ehfcn.cookiechat.scene.GameScene">
+
+    <LinearLayout
+        android:id="@+id/Drawing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:windowSoftInputMode="adjustPan"
+        android:orientation="horizontal"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_ui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/textlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/showtext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="2dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/chatgone_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="CloseChatLog"
+                    app:srcCompat="@drawable/close_btn" />
+
+                <ToggleButton
+                    android:id="@+id/ChatToggle"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/pause_btn_"
+                    android:text="" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/uibar_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/uibar_bottom" />
+
+        <ImageButton
+            android:id="@+id/openchat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ent_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="70dp"
+            android:background="@android:color/transparent"
+            android:onClick="OpenChatLog"
+            android:visibility="gone"
+            app:srcCompat="@drawable/open_btn" />
+
+        <ImageButton
+            android:id="@+id/ent_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/ent_btn" />
+
+        <EditText
+            android:id="@+id/chatbox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignStart="@+id/uibar_bottom"
+            android:background="@null"
+            android:imeOptions="actionSend"
+            android:lines="1"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_ui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/uibar"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/uibar" />
+
+        <ImageButton
+            android:id="@+id/exit_btn"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:onClick="ExitButton"
+            app:srcCompat="@drawable/exit_btn" />
+
+        <ImageButton
+            android:id="@+id/item_btn"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="80dp"
+            android:background="@android:color/transparent"
+            android:onClick="OpenItemUI"
+            app:srcCompat="@drawable/item_btn" />
+
+        <ImageView
+            android:id="@+id/itemview"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="175dp"
+            app:srcCompat="@drawable/view1" />
+
+        <TextView
+            android:id="@+id/itemcount"
+            android:layout_width="43dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="130dp"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:id="@+id/namebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/namebar" />
+
+            <TextView
+                android:id="@+id/UserNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="TextView"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">쿠키챗</string>
+    <string name="loading">loading</string>
+    <string name="signed_out">signed_out</string>
+    <string name="signed_in_fmt">LoginTest</string>
+    <string name="server_client_id">1092378429564-aoe54trvg7021675vcbu9jk6i8v1fpak.apps.googleusercontent.com</string>
+    <string name="kakao_app_key">3bec896562370f37318c5288e8fc9698</string>
+    <string name="kakao_key">3bec896562370f37318c5288e8fc9698</string>
+</resources>
